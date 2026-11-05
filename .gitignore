@@ -1,0 +1,6 @@
+# 构建产物与本地状态
+node_modules/
+dist/
+*.log
+.DS_Store
+Thumbs.db

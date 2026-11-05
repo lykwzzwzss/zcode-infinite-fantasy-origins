@@ -1,0 +1,22 @@
+{
+  "name": "infinite-fantasy-origins",
+  "version": "0.5.1",
+  "description": "无限幻境：起源 0.5.1 —— 把两段系统提示词以追加方式接入 ZCode 系统层（order 100 / 980），并在会话开始、用户输入和上下文压缩后自动续接。",
+  "author": { "name": "xuanmingguo" },
+  "license": "MIT",
+  "homepage": "https://github.com/xuanmingguo/dsh-infinite-gen-2",
+  "keywords": ["system-prompt", "delivery-mode", "harness", "infinite-fantasy", "hooks"],
+  "hooks": "hooks.json",
+  "systemPrompts": [
+    {
+      "name": "infinite-fantasy-origins",
+      "order": 100,
+      "path": "prompts/infinite-fantasy-origins.md"
+    },
+    {
+      "name": "infinite-fantasy-obedience-core",
+      "order": 980,
+      "path": "prompts/obedience-core.md"
+    }
+  ]
+}

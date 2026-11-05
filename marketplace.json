@@ -1,0 +1,24 @@
+{
+  "name": "zcode-infinite-fantasy",
+  "description": "Infinite Fantasy: Origins（无限幻境：起源）—— ZCode 系统提示词插件（双段注入，长会话自动续接）。",
+  "owner": {
+    "name": "lykwzzwzss"
+  },
+  "plugins": [
+    {
+      "name": "infinite-fantasy-origins",
+      "source": "./plugins/infinite-fantasy-origins",
+      "description": "无限幻境：起源 0.5.1 —— 两段系统提示词以追加方式接入 ZCode（order 100 / 980），并在会话开始、用户输入与上下文压缩后自动续接。",
+      "version": "0.5.1",
+      "author": {
+        "name": "xuanmingguo"
+      },
+      "category": "workflow",
+      "keywords": [
+        "system-prompt",
+        "hooks",
+        "infinite-fantasy"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "description": "infinite-fantasy-origins 持久化重注入：ZCode 上下文压缩会丢弃插件 systemPrompts，这里在会话开始、每次用户输入、压缩完成后重新注入服从层，保证插件不因压缩失效。",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": ["${ZCODE_PLUGIN_ROOT}/inject-hook.mjs", "session-start"],
+            "timeoutMs": 30000
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": ["${ZCODE_PLUGIN_ROOT}/inject-hook.mjs", "user-prompt"],
+            "timeoutMs": 30000
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "hooks": [
+          {
+            "type": "process",
+            "command": "node",
+            "args": ["${ZCODE_PLUGIN_ROOT}/inject-hook.mjs", "post-compact"],
+            "timeoutMs": 30000
+          }
+        ]
+      }
+    ]
+  }
+}
